@@ -8,15 +8,29 @@
                     <div class="panel-heading">Панель администратора</div>
 
                     <div class="panel-body">
-                        @if (session('status'))
-                            <div class="alert alert-success">
-                                {{ session('status') }}
-                            </div>
-                        @endif
-                        <div class="alert alert-success">
+                         <div class="alert alert-success">
                             <p>Вы вошли как администратор!
                             </p>
                         </div>
+
+                                <ul class="nav navbar-nav">
+                                    <li>
+                                        <a href="#">
+                                            Клиенты
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Ошибки принтеров
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Модели принтеров
+                                        </a>
+                                    </li>
+                                </ul>
+
                     </div>
                 </div>
             </div>
