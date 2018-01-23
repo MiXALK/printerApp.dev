@@ -27,7 +27,11 @@ class ErrorController extends Controller
      */
     public function create()
     {
-        //
+	    return view('admin.error.create', [
+		    'error'   => [],
+		    'categories' => Category::with('children')->where('parent_id', '0')->get(),
+		    'delimiter'  => ''
+	    ]);
     }
 
     /**
