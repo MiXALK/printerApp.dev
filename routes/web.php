@@ -22,7 +22,9 @@ Route::group(['middleware' => ['web', 'auth']], function (){
 //        return view('welcome');
 //    });
 
-    Route::get('/', function (){
+    Route::resource('/error', 'ErrorController', ['as'=>'admin']);
+
+	Route::get('/', function (){
     if (Auth::user()->admin == 0){
         return view('home');
     }else{
@@ -30,6 +32,7 @@ Route::group(['middleware' => ['web', 'auth']], function (){
         return view('adminhome', $users);
     }
     });
+
 
 });
 
