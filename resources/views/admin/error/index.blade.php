@@ -11,7 +11,8 @@
 
   <hr>
 
-  <a href="#" class="btn btn-primary pull-right"><i class="fa fa-plus-square-o"></i>Создать код ошибки</a>
+  <a href="{{route('admin.error.index')}}" class="btn btn-primary pull-right"><i class="fa fa-plus-square-o"></i>
+    Создать код ошибки</a>
   <table class="table table-striped">
     <thead>
       <th>Код ошибки</th>
@@ -24,7 +25,7 @@
           <td>{{$error->error_code}}</td>
           <td>{{$error->description}}</td>
           <td>
-            <a href="#"><i class="fa fa-edit"></i></a>
+            <a href="{{route('admin.error.edit', ['id'=>$error->id])}}"><i class="fa fa-edit"></i></a>
           </td>
         </tr>
       @empty
@@ -33,6 +34,13 @@
         </tr>
       @endforelse
     </tbody>
+    <tfoot>
+    <tr>
+      <td colspan="3">
+        <ul class="pagination pull-right">{{ $errors->links() }}</ul>
+      </td>
+    </tr>
+    </tfoot>﻿
   </table>
 </div>
 

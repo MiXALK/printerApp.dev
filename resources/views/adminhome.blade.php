@@ -20,7 +20,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="{{route('admin.error.index')}}">
                                             Ошибки принтеров
                                         </a>
                                     </li>
