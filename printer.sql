@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.3
+-- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Янв 23 2018 г., 20:18
--- Версия сервера: 5.7.19
--- Версия PHP: 7.0.21
+-- Время создания: Янв 25 2018 г., 00:33
+-- Версия сервера: 5.7.16
+-- Версия PHP: 7.0.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -41,9 +39,8 @@ CREATE TABLE `errors` (
 --
 
 INSERT INTO `errors` (`id`, `error_code`, `description`, `created_at`, `updated_at`) VALUES
-(1, '546546', 'ошибка', '2018-01-22 21:00:00', NULL),
-(2, '6544htf', 'ещё одна ошибка', '2018-01-25 21:00:00', NULL),
-(3, '43dfsfd', 'кончился тонер', '2018-01-09 21:00:00', NULL);
+(1, 'gdgfdg', 'gdfgfdgdfghg gfdg', '2018-01-24 18:04:16', '2018-01-24 18:04:16'),
+(2, 'gfdgdf', 'gfdfgdfg', '2018-01-24 18:23:23', '2018-01-24 18:23:23');
 
 -- --------------------------------------------------------
 
@@ -100,8 +97,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`, `admin`) VALUES
-(1, 'admin', 'admin@gmail.com', '$2y$10$rtyMoc.8XyizxIs8AUx6iOh3XSblRHUqC2MAi6GiKpT14XUnQxBme', 'Bbvl2nEFYZPHIxciC3x4FTAxwy9b80RnrNJpHptyAovKYwFJeQZgMaZOfmad', '2018-01-21 18:17:46', '2018-01-21 18:17:46', 1),
-(2, 'user', 'user@gmail.com', '$2y$10$Q.uEOBpRHTbKfWr3/XM1geNUw7cRK0OFElo8u8beou90Ok3nmm/o6', 'Q4r3rCYqe7Q9pZk9fazi3flWYUkmsmyGjzttXW5UJ3qVbTzCmUQveB5Ix8wE', '2018-01-22 04:28:55', '2018-01-22 04:28:55', 0);
+(1, 'admin', 'admin@gmail.com', '$2y$10$rtyMoc.8XyizxIs8AUx6iOh3XSblRHUqC2MAi6GiKpT14XUnQxBme', '9mRAUL4cMEWcl2HLVadeBogRw0Xdbs3py9SFUHUtSyhOEu3FPO3uVGSj6Tdc', '2018-01-21 18:17:46', '2018-01-21 18:17:46', 1);
 
 --
 -- Индексы сохранённых таблиц
@@ -140,7 +136,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `errors`
 --
 ALTER TABLE `errors`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT для таблицы `migrations`
 --
@@ -150,8 +146,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;COMMIT;
-
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

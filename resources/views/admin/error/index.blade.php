@@ -11,7 +11,7 @@
 
   <hr>
 
-  <a href="{{route('admin.error.index')}}" class="btn btn-primary pull-right"><i class="fa fa-plus-square-o"></i>
+  <a href="{{route('admin.error.create')}}" class="btn btn-primary pull-right"><i class="fa fa-plus-square-o"></i>
     Создать код ошибки</a>
   <table class="table table-striped">
     <thead>
