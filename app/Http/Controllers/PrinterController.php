@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Error;
+use App\Printer;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
-class ErrorController extends Controller
+class PrinterController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +14,10 @@ class ErrorController extends Controller
      */
     public function index()
     {
-	    return view('admin.error.index', [
-		    'errors' => Error::paginate(10)
+        return view('admin.printer.index', [
+        'printers' => Printer::paginate(10)
 	    ]);
+
     }
 
     /**
@@ -27,9 +27,7 @@ class ErrorController extends Controller
      */
     public function create()
     {
-	    return view('admin.error.create', [
-		    'error'   => []
-	    ]);
+        //
     }
 
     /**
@@ -40,17 +38,16 @@ class ErrorController extends Controller
      */
     public function store(Request $request)
     {
-        Error::create($request->all());
-        return redirect()->route('admin.error.index');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Error  $error
+     * @param  \App\Printer  $printer
      * @return \Illuminate\Http\Response
      */
-    public function show(Error $error)
+    public function show(Printer $printer)
     {
         //
     }
@@ -58,40 +55,34 @@ class ErrorController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Error  $error
+     * @param  \App\Printer  $printer
      * @return \Illuminate\Http\Response
      */
-    public function edit(Error $error)
+    public function edit(Printer $printer)
     {
-        return view('admin.error.edit', [
-            'error'   => $error
-        ]);
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Error  $error
+     * @param  \App\Printer  $printer
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Error $error)
+    public function update(Request $request, Printer $printer)
     {
-        $error->update($request->all());
-        return redirect()->route('admin.error.index');
-
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Error  $error
+     * @param  \App\Printer  $printer
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Error $error)
+    public function destroy(Printer $printer)
     {
-        $error->delete();
-        return redirect()->route('admin.error.index');
-
+        //
     }
 }

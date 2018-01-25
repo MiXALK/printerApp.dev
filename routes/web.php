@@ -23,8 +23,10 @@ Route::group(['middleware' => ['web', 'auth']], function (){
 //    });
 
     Route::resource('/error', 'ErrorController', ['as'=>'admin']);
+    Route::resource('/printer', 'PrinterController', ['as'=>'admin']);
 
-	Route::get('/', function (){
+
+    Route::get('/', function (){
     if (Auth::user()->admin == 0){
         return view('home');
     }else{

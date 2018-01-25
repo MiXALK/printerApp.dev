@@ -25,7 +25,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="{{route('admin.printer.index')}}">
                                             Модели принтеров
                                         </a>
                                     </li>
