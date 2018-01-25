@@ -27,7 +27,10 @@ class PrinterController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.printer.create', [
+            'printer'   => []
+        ]);
+
     }
 
     /**
@@ -38,7 +41,8 @@ class PrinterController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Printer::create($request->all());
+        return redirect()->route('admin.printer.index');
     }
 
     /**
@@ -60,7 +64,9 @@ class PrinterController extends Controller
      */
     public function edit(Printer $printer)
     {
-        //
+        return view('admin.printer.edit', [
+            'printer'   => $printer
+        ]);
     }
 
     /**
@@ -72,7 +78,8 @@ class PrinterController extends Controller
      */
     public function update(Request $request, Printer $printer)
     {
-        //
+        $printer->update($request->all());
+        return redirect()->route('admin.printer.index');
     }
 
     /**
@@ -83,6 +90,7 @@ class PrinterController extends Controller
      */
     public function destroy(Printer $printer)
     {
-        //
+        $printer->delete();
+        return redirect()->route('admin.printer.index');
     }
 }
